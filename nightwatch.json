@@ -1,0 +1,27 @@
+{
+  "src_folders" : ["tests-sample", "C:\github\hello-nightwatch\tests-demoapp"],
+  "globals_path" : "globalsModule.js",
+
+  "webdriver" : {
+    "start_process": true,
+    "server_path": "node_modules/geckodriver/geckodriver.exe",
+    "port": 9515
+  },
+  
+  "selenium": {
+    "start_process": true,
+	"server_path": "node_modules/selenium-server/lib/runner/selenium-server-standalone-3.141.59.jar",
+    "port": 4444,
+	"cli_args": {
+		"webdriver.gecko.driver": "node_modules/geckodriver/geckodriver.exe"
+	}
+  },
+
+  "test_settings" : {
+    "default" : {
+      "desiredCapabilities": {
+        "browserName": "firefox"
+      }
+    }
+  }
+}
